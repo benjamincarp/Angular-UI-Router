@@ -1,9 +1,9 @@
 angular.module('helloworld')
-    .controller('PersonCtrl', function ($scope, PeopleService) {
+    .controller('PersonCtrl', function ($scope, $stateParams, PeopleService) {
         var Person = this;
         Person.person = {};
         
-        PeopleService.getPerson('293').then(function(person) {
+        PeopleService.getPerson($stateParams.personId).then(function(person) {
             Person.person = person;
         });
     });
