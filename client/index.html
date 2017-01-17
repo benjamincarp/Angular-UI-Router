@@ -6,17 +6,9 @@
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/lodash/dist/lodash.compat.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/ngstorage/ngStorage.js"></script>
     <script src="bower_components/moment/moment.js"></script>
-
-    <!--  Hello Galaxy Code -->
-    <!--<script sabout.jso.js"></script>-->
-    <!--<script src="services/people.js"></script>-->
-    <!--<script src="componeabout.jso.js"></script>-->
-    <!--<script src="components/about.js"></script>-->
-    <!--<script src="components/people.js"></script>-->
-    <!--<script src="components/person.js"></script>-->
+    <script src="lib/angular-ui-router.min.js"></script>
 
     <script src="helloworld.js"></script>
     <script src="views/about/about.controller.js"></script>
@@ -26,6 +18,16 @@
     <script src="views/people/people.controller.js"></script>
     <script src="views/people/people.js"></script>
     <script src="services/people.js"></script>
+    <script src="views/person/person.controller.js"></script>
+    <script src="views/person/person.js"></script>
+
+    <!--  Hello Galaxy Code -->
+    <!--<script src="hello.js"></script>-->
+    <!--<script src="services/people.js"></script>-->
+    <!--<script src="components/hello.js"></script>-->
+    <!--<script src="components/about.js"></script>-->
+    <!--<script src="components/people.js"></script>-->
+    <!--<script src="components/person.js"></script>-->
 
     <style>.active { color: red; font-weight: bold; }</style>
 </head>
@@ -37,14 +39,8 @@
         <a ui-sref="people" ui-sref-active="active">People</a>
     </div>
     
-    
     <ui-view></ui-view>
 </body>
 
-<!--<body ng-app="hello">-->
-<!--<a ui-sref="hello" ui-sref-active="active">Hello</a>-->
-<!--<a ui-sref="about" ui-sref-active="active">About</a>-->
-<!--&lt;!&ndash;<a ui-sref="people" ui-sref-active="active">People</a>&ndash;&gt;-->
-<!--<ui-view></ui-view>-->
 </body>
 </html>

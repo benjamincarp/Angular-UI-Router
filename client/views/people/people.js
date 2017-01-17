@@ -3,6 +3,7 @@ angular.module('helloworld')
         $stateProvider
             .state('people', {
                 url: '/people',
+                controller: 'PersonCtrl',
                 templateUrl: '/views/people/people.html'
             });
     });

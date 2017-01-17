@@ -39,5 +39,5 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 
 
 myApp.run(function($http, $uiRouter) {
-  $http.get('data/people.json', { cache: true });
+    $http.get('data/people.json', { cache: true });
 });
