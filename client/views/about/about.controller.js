@@ -2,10 +2,9 @@
 
 angular.module('helloworld')
     .controller('AboutCtrl', function ($scope, PeopleService, $stateParams) {
-        var About = this;
-        About.person = {};
+        $scope.person = {};
 
         PeopleService.getPerson($stateParams.personId).then(function(person) {
-            About.person = person;
+            $scope.person = person;
         });
     });

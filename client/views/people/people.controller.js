@@ -2,10 +2,9 @@
 
 angular.module('helloworld')
     .controller('PeopleCtrl', function ($scope, PeopleService) {
-        var People = this;
-        People.people = [];
+        $scope.people = [];
         
         PeopleService.getAllPeople().then(function(folks) {
-            People.people = folks;
+            $scope.people = folks;
         });
     });

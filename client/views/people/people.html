@@ -1,7 +1,7 @@
-<div class="flex-h" ng-controller="PeopleCtrl as people">
+<div class="flex-h">
     <div class="people">
         <ul>
-            <li ng-repeat="person in people.people" ui-sref-active="active">
+            <li ng-repeat="person in people" ui-sref-active="active">
                 <a ui-sref="people.person({ personId: person.id })" ng-class="{active: $state.params.personId === person.id}">
                     {{person.name}}
                 </a>

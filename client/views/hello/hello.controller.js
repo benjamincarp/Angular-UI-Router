@@ -2,26 +2,25 @@
 
 angular.module('helloworld')
     .controller('HelloCtrl', function ($scope, PeopleService, $stateParams) {
-        var Hello = this;
-        Hello.person = {};
-        Hello.isDefaultGreeting = true;
-        Hello.greeting = 'Hello!';
+        $scope.person = {};
+        $scope.isDefaultGreeting = true;
+        $scope.greeting = 'Hello!';
 
         PeopleService.getPerson($stateParams.personId).then(function(person) {
-            Hello.person = person;
-            Hello.greeting = `Hello ${person.name}!`;
+            $scope.person = person;
+            $scope.greeting = `Hello ${person.name}!`;
         });
 
         
         
-        Hello.toggleGreeting = function() {
-            Hello.isDefaultGreeting = !Hello.isDefaultGreeting;
+        $scope.toggleGreeting = function() {
+            $scope.isDefaultGreeting = !$scope.isDefaultGreeting;
             
-            if (!Hello.person.name) {
-                Hello.greeting = 'Hello!';
+            if (!$scope.person.name) {
+                $scope.greeting = 'Hello!';
             }
             else{
-                Hello.greeting = Hello.isDefaultGreeting ? `Hello ${Hello.person.name}!` : `What's up ${Hello.person.name}?`
+                $scope.greeting = $scope.isDefaultGreeting ? `Hello ${$scope.person.name}!` : `What's up ${$scope.person.name}?`
             }
        }; 
     });

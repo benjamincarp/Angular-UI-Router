@@ -1,4 +1,14 @@
-<div ng-controller="HelloCtrl as hello">
-    <h3>{{hello.greeting}}</h3>
-    <button ng-click="hello.toggleGreeting()">toggle greeting</button>
+<div>
+    <h3>{{greeting}}</h3>
+    <button ng-click="toggleGreeting()">toggle greeting</button>
+    
+    <ul>
+        <li>
+            <a ui-sref="people.hello.contact" ui-sref-active="active">Contact</a>
+        </li>
+        <li>
+            <a ui-sref="people.hello.settings" ui-sref-active="active">Settings</a>
+        </li>
+    </ul>
+    <ui-view></ui-view>
 </div>
