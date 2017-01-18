@@ -3,16 +3,18 @@ var myApp = angular.module('helloworld', ['ui.router']);
 myApp.config(function($stateProvider) {
     //example of redirecting to a new state
     $stateProvider
-        .state('home', {
+        .state({
+            name: 'home',
             url: '/',
             redirectTo: () => {
-                return 'hello';
+                return 'people';
             }
         });
 
     //example of redirecting outside the state tree
     $stateProvider
-        .state('google', {
+        .state({
+            name: 'google',
             url: '/google',
             onEnter: function() {
                 window.location = 'http://www.google.com';

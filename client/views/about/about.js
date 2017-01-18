@@ -1,7 +1,8 @@
 angular.module('helloworld')
     .config(function ($stateProvider) {
         $stateProvider
-            .state('about', {
+            .state({
+                name: 'about',
                 url: '/about',
                 templateUrl: '/views/about/about.html',
                 controller: 'AboutCtrl'

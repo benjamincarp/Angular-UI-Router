@@ -1,0 +1,6 @@
+.view-menu {
+    display: none;
+}
+.active .view-menu {
+    display: block;
+}

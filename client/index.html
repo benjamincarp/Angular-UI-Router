@@ -20,17 +20,14 @@
         <script src="services/people.js"></script>
         <script src="views/person/person.controller.js"></script>
         <script src="views/person/person.js"></script>
+
+
+        <link rel="stylesheet" type="text/css" href="index.css">
     
         <style>.active { color: red; font-weight: bold; }</style>
     </head>
     
     <body ng-app="helloworld">
-        <div class="nav">
-            <a ui-sref="hello" ui-sref-active="active">Hello</a>
-            <a ui-sref="about" ui-sref-active="active">About</a>
-            <a ui-sref="people" ui-sref-active="active">People</a>
-        </div>
-        
         <ui-view></ui-view>
     </body>
     

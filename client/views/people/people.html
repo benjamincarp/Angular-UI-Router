@@ -1,13 +1,25 @@
 <div class="flex-h" ng-controller="PeopleCtrl as people">
     <div class="people">
-        <h3>Some people:</h3>
-            <ul>
-                <li ng-repeat="person in people.people">
-                    <a ui-sref-active="active" ui-sref="people.person({ personId: person.id })">
-                        {{person.name}}
-                    </a>
-                </li>
-            </ul>
+        <ul>
+            <li ng-repeat="person in people.people" ui-sref-active="active">
+                <a ui-sref="people.person({ personId: person.id })">
+                    {{person.name}}
+                </a>
+                <ul class="view-menu">
+                    <li>
+                        <a ui-sref="about">
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a ui-sref="hello">
+                            Hello
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+        </ul>
     </div>
     <ui-view></ui-view>
 </div>
