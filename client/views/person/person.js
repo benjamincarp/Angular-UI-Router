@@ -4,6 +4,6 @@ angular.module('helloworld')
             .state({
                 name: 'people.person',
                 url: '/{personId}',
-                templateUrl: '/views/person/person.html'
+                redirectTo: 'people.about'
             });
     });

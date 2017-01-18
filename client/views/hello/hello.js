@@ -2,8 +2,8 @@ angular.module('helloworld')
     .config(function ($stateProvider) {
         $stateProvider
             .state({
-                name: 'hello',
-                url: '/hello',
+                name: 'people.hello',
+                url: '/{personId}/hello',
                 templateUrl: '/views/hello/hello.html',
                 controller: 'HelloCtrl'
             });

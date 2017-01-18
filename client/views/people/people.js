@@ -4,7 +4,7 @@ angular.module('helloworld')
             .state({
                 name: 'people',
                 url: '/people',
-                controller: 'PersonCtrl',
+                controller: 'PeopleCtrl',
                 templateUrl: '/views/people/people.html'
             });
     });
