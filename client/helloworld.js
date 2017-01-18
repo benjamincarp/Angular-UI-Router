@@ -20,4 +20,7 @@ myApp.config(function($stateProvider) {
                 window.location = 'http://www.google.com';
             }
         });
+})
+.run(function($rootScope, $state) {
+    $rootScope.$state = $state;
 });

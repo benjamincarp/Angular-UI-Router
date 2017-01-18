@@ -1,6 +1,11 @@
 .view-menu {
     display: none;
 }
+
 .active .view-menu {
     display: block;
+}
+
+ul {
+    list-style: none;
 }
